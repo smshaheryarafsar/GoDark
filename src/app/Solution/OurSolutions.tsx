@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "./Title";
 import Description from "./Description";
-import CTAButton from "./CTAButton";
 import ImageContainer from "./ImageContainer";
 import Footer from "./Footer";
 

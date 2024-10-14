@@ -4,7 +4,6 @@ import Description from "./Description";
 import CTAButton from "./CTAButton";
 import HeroImage from "./HeroImage";
 import sliderbgImage from "../images/slider-bg-01.png";
-import maskImage from "../images/mask-circle.png";
 
 const HeroSection: React.FC = () => {
   return (

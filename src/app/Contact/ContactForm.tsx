@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FormEvent } from "react";
 import axios from "axios";
-
-enum AlertMessageType {
-  Success = "success",
-  Error = "error",
-}
-
-type AlertMessage = { type?: AlertMessageType; message?: string };
 
 const ContactForm: React.FC = () => {
   const formFields = [
@@ -24,10 +16,8 @@ const ContactForm: React.FC = () => {
   ];
 
   const {
-    register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
+    formState: {},
   } = useForm({ mode: "onChange" });
 
   const [Name, setName] = useState("");

@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
 import Slider from "./Slider/index";
 import AboutUs from "./About/index";
 import Overview from "./Overview/index";

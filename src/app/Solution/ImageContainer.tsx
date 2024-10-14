@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import profilePic from "../images/image-58.jpg";
 import ImageSlider from "simple-image-carousel";
 
