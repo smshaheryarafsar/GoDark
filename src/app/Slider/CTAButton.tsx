@@ -4,11 +4,17 @@ const CTAButton: React.FC = () => {
   return (
     <>
       <div className="cta-container">
-        <div className="cta-wrapper">
+        {/* <div className="cta-wrapper">
           <button>
             <div className="left"></div>
             Hover me!
             <div className="right"></div>
+          </button>
+        </div> */}
+        <div className="cta-wrapper">
+          <button className="cta-button">
+            <div className="cta-background" />
+            <span className="cta-text">Discover Our Solutions</span>
           </button>
         </div>
       </div>
@@ -158,7 +164,7 @@ const CTAButton: React.FC = () => {
         .cta-wrapper {
           align-self: stretch;
           display: flex;
-          min-width: 240px;
+          min-width: 395px;
           width: 331px;
           flex-direction: column;
           justify-content: center;
@@ -202,6 +208,9 @@ const CTAButton: React.FC = () => {
         .cta-text {
           z-index: 0;
           margin: auto 0;
+          font-family: "Calibri";
+          font-size: 22px;
+          padding: 6px 0px;
         }
       `}</style>
     </>

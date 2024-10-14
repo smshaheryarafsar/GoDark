@@ -26,7 +26,7 @@ const Description: React.FC = () => {
             >
               Key Features:
             </span>
-            <ul>
+            <ul style={{ marginLeft: "20px" }}>
               <li>
                 <span
                   style={{ fontFamily: "Sora, sans-serif", color: "#95979E" }}

@@ -10,12 +10,15 @@ import Blog from "./Blog/index";
 import Ending from "./Ending/index";
 import Footer from "./Footer/index";
 import Header from "./Header/index";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <>
       <div className="font-clash-display-variable">
-        <Header />
+        <Suspense fallback={<p>Loading feed...</p>}>
+          <Header />
+        </Suspense>
         <Slider />
         <AboutUs companyName={"Godark.ai"} />
         <Overview />
