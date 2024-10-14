@@ -15,10 +15,7 @@ const ContactForm: React.FC = () => {
     },
   ];
 
-  const {
-    handleSubmit,
-    formState: {},
-  } = useForm({ mode: "onChange" });
+  const { handleSubmit } = useForm({ mode: "onChange" });
 
   const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
