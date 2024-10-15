@@ -10,7 +10,7 @@ import Blog from "./Blog/index";
 import Ending from "./Ending/index";
 import Footer from "./Footer/index";
 import Header from "./Header/index";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [showPages, setshowPages] = useState(false);
