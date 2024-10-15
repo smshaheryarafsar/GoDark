@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
               <CTAButton />
             </div>
           </div>
-          <HeroImage />
+          {/* <HeroImage /> */}
         </div>
       </section>
       <style jsx>{`
@@ -42,22 +42,25 @@ const HeroSection: React.FC = () => {
           position: absolute;
           background-image: "";
           overflow: visible;
-          /* margin-top: -300px; */
-          width: max-content;
+          /* margin-top: -300px; 
+          width: max-content; */
           animation: zoom-in 4s !important;
           overflow: hidden;
-          left: 60%;
-          position: absolute;
+          /* left: 60%;
+          position: absolute; */
           top: 2%;
+          padding-left: 60%;
         }
 
         @keyframes zoom-in {
           0% {
             transform: scale(3.5);
+            padding-left: 0%;
           }
 
           100% {
             transform: scale(1);
+            padding-left: 60%;
           }
         }
         .mask {
@@ -86,7 +89,7 @@ const HeroSection: React.FC = () => {
         .hero-section {
           background-color: #000;
           width: 100%;
-          padding: 0 0 200px 80px;
+          padding: 0 0 200px 00px;
           margin-top: -100px;
         }
 
@@ -116,6 +119,8 @@ const HeroSection: React.FC = () => {
           line-height: normal;
           width: 45%;
           margin-left: 0;
+          padding-left: 80px;
+          z-index: 3;
         }
 
         @media (max-width: 991px) {

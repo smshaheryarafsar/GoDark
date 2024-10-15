@@ -87,7 +87,7 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
         @media (max-width: 991px) {
           .container2 {
             max-width: 100%;
-            margin-top: 40px;
+            pading-top: 40px;
           }
         }
 
@@ -268,6 +268,10 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
           box-shadow: none;
           border: 1px solid #ffffff5c;
           border-radius: 20px;
+        }
+
+        .cta-button > span {
+          font-family: Inter, sans-serif !important;
         }
 
         .cta-background {

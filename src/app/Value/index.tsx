@@ -38,7 +38,7 @@ export default function Values() {
               </div>
             </div>
           </div>
-          <div className="div-8">
+          <div className="div-8 div-888" style={{ width: "91%" }}>
             <div className="div-9" />
             <div className="div-10">
               <div className="div-11" />
@@ -220,8 +220,6 @@ export default function Values() {
         }
         @media (max-width: 991px) {
           .div-3 {
-            margin-top: 40px;
-            padding: 0 20px 100px;
           }
         }
         .item {
@@ -301,22 +299,25 @@ export default function Values() {
           .div-7 {
             max-width: 100%;
             margin-top: 40px;
-            padding: 0 20px 100px;
+            padding: 20px;
+            min-height: 100%;
           }
         }
         .div-8 {
           align-self: end;
           display: flex;
-          width: 100%;
-          max-width: 1220px;
           align-items: flex-start;
           gap: 20px;
+          width: 100%;
           flex-wrap: wrap;
           justify-content: space-between;
         }
         @media (max-width: 991px) {
           .div-8 {
             max-width: 100%;
+          }
+          .div-888 {
+            max-width: 80% !important;
           }
         }
         .div-9 {

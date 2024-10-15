@@ -3,6 +3,21 @@
   src: url("./fonts/ClashDisplay-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Sora";
+  src: url("./fonts/Sora.ttf");
+}
+
+@font-face {
+  font-family: "Menlo";
+  src: url("./fonts/Menlo-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Variable.ttf");
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -61,4 +76,106 @@ a {
   padding: 7px 10px;
   border-radius: 3px;
   margin-left: 6px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #ff5100;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin-bottom: 15px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container {
+  left: 45%;
+  top: 35%;
+  position: absolute;
+}
+
+@media screen and (max-width: 967px) {
+  .hero-section {
+    padding-left: 0px !important;
+  }
+
+  section {
+    padding: 50px !important;
+    background: #111111 !important;
+  }
+
+  .expertise-cards {
+    margin-top: 35% !important;
+    position: absolute !important;
+    width: 60% !important;
+    padding: 25px !important;
+  }
+
+  .feature-card {
+    margin-top: 18% !important;
+    padding: 25px !important;
+    width: 60% !important;
+    margin-left: 5%;
+  }
+
+  .sustainability-section {
+    padding: 25px !important;
+  }
+
+  .content-wrapper {
+    padding-left: 0px !important;
+  }
+
+  .container2 {
+    padding: 0px 70px 90px 70px !important;
+  }
+
+  .nav-list {
+    max-width: 100% !important;
+    line-height: 3 !important;
+    padding-left: 5% !important;
+    padding-top: 2% !important;
+  }
+
+  .overview-contaimer {
+    background-color: #111;
+    padding: 60px 70px 90px 70px !important;
+  }
+
+  .container2 > .footer {
+    margin: 0 auto !important;
+  }
+
+  .masked-section {
+    padding-left: 24% !important;
+  }
+
+  .about-us {
+    z-index: 2 !important;
+    position: absolute !important;
+  }
+
+  .left-column {
+    padding-top: 140px !important;
+  }
 }

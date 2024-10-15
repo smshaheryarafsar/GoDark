@@ -104,7 +104,7 @@ const Description: React.FC = () => {
         @media (max-width: 991px) {
           .container2 {
             max-width: 100%;
-            margin-top: 40px;
+            padding-top: 40px;
           }
         }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import NavLink from "./NavLink";
 import ContactButton from "./ContactButton";
+import Logo from "../../images/godark-logo.png";
 
 interface NavigationProps {
   navItems: Array<{ text: string; href: string }>;
@@ -9,10 +10,13 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ navItems }) => {
   return (
     <nav className="main-nav">
-      <div className="logo-container">
+      {/* <div className="logo-container">
         <div className="logo">
-          <div className="logo-inner" />
+          <img src={Logo.src} className="logo-img" />
         </div>
+      </div> */}
+      <div>
+        <img src={Logo.src} className="logo-img" />
       </div>
       <div className="gradient-background" />
       <ul className="nav-list">
@@ -22,13 +26,17 @@ const Navigation: React.FC<NavigationProps> = ({ navItems }) => {
         <ContactButton />
       </ul>
       <style jsx>{`
+        .logo-img {
+          width: 60px;
+          padding-top: 20px;
+        }
         .main-nav {
           position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
           background-color: transparent;
-          padding: 40px 95px 0;
+          padding: 0px 95px 0;
         }
         @media (max-width: 991px) {
           .main-nav {

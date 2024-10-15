@@ -10,38 +10,52 @@ import Blog from "./Blog/index";
 import Ending from "./Ending/index";
 import Footer from "./Footer/index";
 import Header from "./Header/index";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 export default function Home() {
+  const [showPages, setshowPages] = useState(false);
+  setTimeout(() => {
+    setshowPages(true);
+  }, 2000);
+
   return (
     <>
-      <div className="font-clash-display-variable">
-        <Suspense fallback={<p>Loading feed...</p>}>
-          <Header />
-        </Suspense>
-        <Slider />
-        <AboutUs companyName={"Godark.ai"} />
-        <Overview />
-        <Soltuions />
-        <Choose />
-        <Values />
-        <Contact
-          backgroundImageSrc={
-            "https://cdn.builder.io/api/v1/image/assets/TEMP/f7fb893bbd0da50965b217abb4a67149cc0032f642cdac6b4f7ee0d501538017?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
-          }
-        />
-        <Blog />
-        <Ending
-          title={"Whitepapers and Guides"}
-          content={
-            "Offer in-depth guides and white papers on key topics such as inventory management, digital marketing strategies for restaurants, and optimising kitchen operations using AI."
-          }
-          imageSrc={
-            "https://cdn.builder.io/api/v1/image/assets/TEMP/af5c9271b19ddefccdbe1c11d5f2dcfa7aff15e12c07ecd0edc6381964af26c0?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
-          }
-        />
-        <Footer copyrightYear={2024} companyName={"Godark.ai"} />
-      </div>
+      {showPages ? (
+        <>
+          <div className="font-clash-display-variable">
+            <Header />
+            <Slider />
+            <AboutUs companyName={"Godark.ai"} />
+            <Overview />
+            <Soltuions />
+            <Choose />
+            <Values />
+            <Contact
+              backgroundImageSrc={
+                "https://cdn.builder.io/api/v1/image/assets/TEMP/f7fb893bbd0da50965b217abb4a67149cc0032f642cdac6b4f7ee0d501538017?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
+              }
+            />
+            <Blog />
+            <Ending
+              title={"Whitepapers and Guides"}
+              content={
+                "Offer in-depth guides and white papers on key topics such as inventory management, digital marketing strategies for restaurants, and optimising kitchen operations using AI."
+              }
+              imageSrc={
+                "https://cdn.builder.io/api/v1/image/assets/TEMP/af5c9271b19ddefccdbe1c11d5f2dcfa7aff15e12c07ecd0edc6381964af26c0?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
+              }
+            />
+            <Footer copyrightYear={2024} companyName={"Godark.ai"} />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="loader-container">
+            <div className="loader"></div>
+            <p>Loading, please wait...</p>
+          </div>
+        </>
+      )}
     </>
   );
 }

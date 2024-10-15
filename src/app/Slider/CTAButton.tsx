@@ -18,6 +18,7 @@ const CTAButton: React.FC = () => {
           </button>
         </div>
       </div>
+
       <style jsx>{`
         button {
           position: relative;
@@ -175,7 +176,7 @@ const CTAButton: React.FC = () => {
         .cta-button {
           border-radius: 11999px;
           background-color: #d1d1d1;
-          box-shadow: 10px 0 5px #ff5100;
+          padding: 13px 61px 13px 62px;
           position: relative;
           display: flex;
           min-height: 48px;
@@ -183,7 +184,7 @@ const CTAButton: React.FC = () => {
           gap: 40px 60px;
           overflow: hidden;
           justify-content: center;
-          padding: 13px 61px 13px 62px;
+
           border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
@@ -208,8 +209,8 @@ const CTAButton: React.FC = () => {
         .cta-text {
           z-index: 0;
           margin: auto 0;
-          font-family: "Calibri";
-          font-size: 22px;
+          font-family: Menlo, sans-serif !important;
+          font-size: 18px;
           padding: 6px 0px;
         }
       `}</style>

@@ -49,7 +49,7 @@ export const styles = css`
   .description {
     z-index: 0;
     margin-top: 17px;
-    font: 32px/51px Inter, sans-serif;
+    font: 32px/51px Sora, sans-serif !important;
   }
 
   .highlight {

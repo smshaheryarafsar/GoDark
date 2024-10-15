@@ -4,10 +4,10 @@ const CompanyOverview: React.FC = () => {
       <div className="overview-contaimer">
         <section className="company-overview">
           <div className="content-wrapper">
-            <div className="highlight-bar" aria-hidden="true" />
             <h1 className="title">Company Overview</h1>
             <p className="description">
-              Founded with a vision to transform the F&B industry,{" "}
+              Founded with a vision to transform the{" "}
+              <span className="highlight2">F&B industry,</span>{" "}
               <span className="highlight">Godark.ai</span> is a leader in
               delivering digital solutions that empower businesses to thrive in
               a competitive landscape. Our flagship product, ChefAdmin,
@@ -54,6 +54,7 @@ const CompanyOverview: React.FC = () => {
             right: 90px;
             top: 113px;
             height: 45px;
+            display: none;
           }
 
           .title {
@@ -66,11 +67,16 @@ const CompanyOverview: React.FC = () => {
           .description {
             z-index: 0;
             margin-top: 17px;
-            font: 32px/51px Inter, sans-serif;
+            font: 32px/51px Sora, sans-serif !important;
           }
 
           .highlight {
             color: #ff5100;
+          }
+
+          .highlight2 {
+            background: #ff5100;
+            color: #fff;
           }
 
           @media (max-width: 991px) {
