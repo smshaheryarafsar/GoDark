@@ -2,7 +2,6 @@ import React from "react";
 import BrandName from "./BrandName";
 import Description from "./Description";
 import CTAButton from "./CTAButton";
-import HeroImage from "./HeroImage";
 import sliderbgImage from "../images/slider-bg-01.png";
 
 const HeroSection: React.FC = () => {
