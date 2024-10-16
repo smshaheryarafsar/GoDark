@@ -1,7 +1,40 @@
 import React from "react";
 import ArticleCard from "./ArticleCard";
+import { Client } from "@notionhq/client";
 
 const BlogAndResources: React.FC = () => {
+  const notion = new Client({
+    auth: "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",
+  });
+
+  const databaseId = "120d332828bc80d3b249f8c7b4f14302"; // Replace with your Notion database ID
+
+  const getBlogs = async () => {
+    try {
+      const response = await notion.databases.query({
+        database_id: databaseId,
+      });
+
+      console.log(response);
+      return response;
+      // const blogPosts = response.results.map((page) => {
+      //   return {
+      //     id: page.id,
+      //     title: page.properties.Title.title[0].text.content,
+      //     content: page.properties.Content.rich_text[0].text.content,
+      //     image: page.properties.Image.files[0]?.file.url || null,
+      //   };
+      // });
+
+      // res.status(200).json(blogPosts);
+    } catch (error) {
+      console.error(error);
+      // res.status(500).json({ error: "Failed to fetch data from Notion" });
+    }
+  };
+
+  getBlogs();
+
   const articlesData = [
     {
       imageUrl:
