@@ -42,7 +42,7 @@ const WhyChooseUsSection: React.FC = () => {
           justify-content: space-between;
           padding: 60px 60px;
           max-width: 100%;
-          background: #111;
+          background: #000;
         }
         .content-wrapper {
           align-self: start;

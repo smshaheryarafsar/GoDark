@@ -37,7 +37,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
       <style jsx>{`
         .main-container {
           padding: 60px 60px;
-          background: #111;
+          background: #000;
         }
         .blog-header {
           align-self: start;
@@ -107,10 +107,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 
         .article-card {
           display: flex;
-          min-width: 240px;
+          min-width: 28%;
           flex-direction: column;
           justify-content: start;
-          width: 400px;
+          width: 28%;
         }
 
         @media (max-width: 991px) {

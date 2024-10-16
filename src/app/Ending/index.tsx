@@ -19,7 +19,7 @@ const WhitepapersAndGuides: React.FC<WhitepapersAndGuidesProps> = ({
       </div>
       <style jsx>{`
         .whitepapers-guides {
-          background-color: #111;
+          background-color: #000;
           display: flex;
           width: 100%;
           flex-direction: column;

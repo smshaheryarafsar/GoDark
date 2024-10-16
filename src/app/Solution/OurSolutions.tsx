@@ -41,7 +41,7 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
 
       <style jsx>{`
         .containter {
-          background-color: #111;
+          background-color: #000;
           padding: 60px 190px 0px 70px;
         }
         .our-solutions-section {
@@ -80,7 +80,7 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
           width: 100%;
           max-width: 100%;
           flex-direction: column;
-          background-color: #111;
+          background-color: #000;
           padding: 60px 190px 90px 70px;
         }
 

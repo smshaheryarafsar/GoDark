@@ -25,7 +25,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           width: 100%;
         }
         .feature-card {
-          background-color: #222;
+          background-color: #111;
           display: flex;
           min-height: 100%;
           flex-direction: column;

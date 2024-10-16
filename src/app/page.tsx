@@ -1,7 +1,7 @@
 "use client";
 import Slider from "./Slider/index";
 import AboutUs from "./About/index";
-import Overview from "./Overview/index";
+// import Overview from "./Overview/index";
 import Soltuions from ".//Solution/index";
 import Choose from "./ChooseUs/index";
 import Values from "./Value/index";
@@ -26,7 +26,7 @@ export default function Home() {
             <Header />
             <Slider />
             <AboutUs companyName={"Godark.ai"} />
-            <Overview />
+            {/* <Overview /> */}
             <Soltuions />
             <Choose />
             <Values />

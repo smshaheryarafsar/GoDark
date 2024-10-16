@@ -158,8 +158,8 @@ a {
   }
 
   .overview-contaimer {
-    background-color: #111;
-    padding: 60px 70px 90px 70px !important;
+    background-color: #000;
+    padding: 60px 100px 60px 0px !important;
   }
 
   .container2 > .footer {
@@ -178,4 +178,8 @@ a {
   .left-column {
     padding-top: 140px !important;
   }
+}
+
+.fJzuSe {
+  width: 100% !important;
 }

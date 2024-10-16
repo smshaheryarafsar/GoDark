@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
           width: 100%;
           max-width: 100%;
           flex-direction: column;
-          background-color: #111;
+          background-color: #000;
           padding: 60px 190px 90px 70px;
         }
 

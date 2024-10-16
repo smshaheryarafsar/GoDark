@@ -39,7 +39,7 @@ const StrategicExpertise: React.FC = () => {
           width: 35%;
         }
         .expertise-cards {
-          background-color: #222;
+          background-color: #111;
           z-index: 10;
           display: flex;
           min-height: max-content;
@@ -57,7 +57,7 @@ const StrategicExpertise: React.FC = () => {
         .expertise-image {
           aspect-ratio: 0.7;
           object-fit: contain;
-          width: 100%;
+          width: 75%;
           border-radius: 14px;
           flex-grow: 1;
           z-index: 2;

@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ copyrightYear, companyName }) => {
       </div>
       <style jsx>{`
         .footer {
-          background-color: #111;
+          background-color: #000;
           display: flex;
           justify-content: center;
           padding: 0 96px;

@@ -24,7 +24,7 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ backgroundImageSrc }) => {
         .get-in-touch {
           border-radius: 0;
           padding-top: 61px;
-          background: #111;
+          background: #000;
         }
         .content-wrapper {
           display: flex;

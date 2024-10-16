@@ -5,8 +5,8 @@ import ImageSlider from "simple-image-carousel";
 const ImageContainer: React.FC = () => {
   const images = [
     { url: profilePic.src },
-    { url: profilePic.src },
-    { url: profilePic.src },
+    // { url: profilePic.src },
+    // { url: profilePic.src },
   ];
 
   return (
@@ -27,7 +27,7 @@ const ImageContainer: React.FC = () => {
           showDots={true}
           enableDrag={true}
           enableLoop={true}
-          width={600}
+          // width={800}
           height={610}
           objectFit="cover"
           dotColor="#ff5100"
@@ -42,6 +42,9 @@ const ImageContainer: React.FC = () => {
         />
       </div>
       <style jsx>{`
+        .fJzuSe {
+          width: 100% !important;
+        }
         .containter {
           background-color: #111;
           padding: 60px 190px 0px 70px;
@@ -82,7 +85,7 @@ const ImageContainer: React.FC = () => {
           width: 100%;
           max-width: 100%;
           flex-direction: column;
-          background-color: #111;
+          background-color: #000;
           padding: 60px 190px 90px 70px;
         }
 

@@ -2,6 +2,7 @@ import React from "react";
 import MissionVision from "./MissionVision";
 import { AboutUsProps } from "./types";
 import styles from "./styles";
+import Overview from "../Overview/index";
 
 const AboutUs: React.FC<AboutUsProps> = ({ companyName }) => {
   return (
@@ -20,6 +21,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ companyName }) => {
             resource optimisation supports the long-term sustainability and
             security of food systems.
           </p>
+          <Overview />
         </div>
         <MissionVision />
       </div>

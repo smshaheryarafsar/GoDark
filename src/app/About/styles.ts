@@ -2,13 +2,22 @@ import css from "styled-jsx/css";
 
 export default css`
   .about-us {
-    background-color: #111;
+    background-color: #000;
     padding: 60px 190px 90px 70px;
   }
 
   .content-wrapper {
     display: flex;
     gap: 20px;
+  }
+
+  .left-border {
+    border-left: 2px solid #545252;
+    margin-left: -15px;
+    padding-left: 20px;
+    margin-top: -10px;
+    padding-top: 2px;
+    padding-bottom: 30px;
   }
 
   .info-column {
@@ -62,12 +71,12 @@ export default css`
   }
 
   .line.short {
-    height: 140px;
+    height: 180px;
   }
 
   .line.long {
-    height: 210px;
-    margin-top: 154px;
+    height: 260px;
+    margin-top: 110px;
   }
 
   .content {

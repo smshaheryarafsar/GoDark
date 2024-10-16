@@ -20,8 +20,8 @@ const CompanyOverview: React.FC = () => {
       <style jsx>
         {`
           .overview-contaimer {
-            background-color: #111;
-            padding: 60px 190px 90px 70px;
+            background-color: #000;
+            padding: 60px 100px 60px 0px !important;
           }
           .content-wrapper {
             display: flex;
@@ -33,7 +33,7 @@ const CompanyOverview: React.FC = () => {
             flex-direction: column;
             color: #fff;
             font-weight: 400;
-            background-color: #111;
+            background-color: #000;
           }
 
           .content-wrapper {

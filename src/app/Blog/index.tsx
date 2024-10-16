@@ -89,7 +89,7 @@ const BlogAndResources: React.FC = () => {
       <style jsx>{`
         .main-container {
           padding: 60px 60px;
-          background: #111;
+          background: #000;
         }
         .blog-header {
           align-self: start;

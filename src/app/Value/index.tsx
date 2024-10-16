@@ -171,7 +171,7 @@ export default function Values() {
           display: flex;
           flex-direction: column;
           align-items: start;
-          background-color: rgba(17, 17, 17, 1);
+          background-color: #000;
           padding: 60px 60px;
         }
         .div-2 {
@@ -282,7 +282,7 @@ export default function Values() {
           border: 1px solid rgba(84, 82, 82, 1);
         }
         .div-7 {
-          background-color: rgba(34, 34, 34, 1);
+          background-color: #111;
           align-self: end;
           display: flex;
           margin-top: 51px;

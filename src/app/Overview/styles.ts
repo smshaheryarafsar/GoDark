@@ -16,7 +16,7 @@ export const styles = css`
     flex-direction: column;
     color: #fff;
     font-weight: 400;
-    background-color: #111;
+    background-color: #000;
   }
 
   .content-wrapper {
