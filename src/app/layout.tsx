@@ -38,6 +38,67 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${ClashDisplayVariable.variable} `}
       >
         {children}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                      let FollowBox = "#Wrap .FollowBox";
+                      gsap.set(FollowBox, {
+                        xPercent: 50,
+                        yPercent: 0,
+                        transformOrigin: 'center',
+                        scale: 1
+                      });
+
+                      let initialMouseMove = true
+                      let mouseMoved = 0
+                      let timer
+
+                      window.addEventListener("mousemove", (e) => {
+                        // if it's the first mouse movement run this
+                        if (initialMouseMove) {
+                          // it's not the first mouse move anymore, 
+                          // so we won't run this again 
+                          initialMouseMove = false
+                          
+                          gsap.to(FollowBox, {
+                            scale: 1,
+                            stagger: 0.02,
+                            ease: 'sine.out'
+                          })
+                        }
+                        
+                        // clear the timer every time the mouse moves
+                        clearTimeout(timer);
+                        // set a timer for 0.1 second 
+                        timer = setTimeout(mouseStopped,10);
+                        
+                        function mouseStopped() {
+                          console.log('stopped')
+                          
+                          // reset this variable 
+                          // so we can track the first mouse move again
+                          initialMouseMove = true
+                          
+                          gsap.to(FollowBox, {
+                            scale: 1,
+                            stagger: 0.02,
+                            ease: 'sine.out'
+                          })
+                        }
+                        
+                        gsap.to(FollowBox, {
+                          duration: 0.5,
+                          overwrite: "auto",
+                          x: e.clientX - 220,
+                          y: e.clientY - 350,
+                          stagger: 0.2,
+                          ease: "none"
+                        });
+                      });
+                  `,
+          }}
+        ></script>
       </body>
     </html>
   );

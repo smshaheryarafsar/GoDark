@@ -180,6 +180,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         .author-name {
           color: #fff;
           font: 600 19px/1 Inter, sans-serif;
+          width: 100%;
+          margin-bottom: 10px;
         }
 
         .read-time {
@@ -201,6 +203,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         .read-time-text {
           color: #fff;
           font: 400 17px/1 Inter, sans-serif;
+          margin-left: 7px;
         }
       `}</style>
     </>

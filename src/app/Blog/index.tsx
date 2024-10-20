@@ -3,34 +3,38 @@ import ArticleCard from "./ArticleCard";
 import { Client } from "@notionhq/client";
 
 const BlogAndResources: React.FC = () => {
-  const notion = new Client({
-    auth: "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",
-  });
+  // const notion = new Client({
+  //   auth: "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",
+  // });
 
-  const databaseId = "120d332828bc80d3b249f8c7b4f14302"; // Replace with your Notion database ID
+  // const databaseId = "122806e58a3e805b8bb0c9ce97b17775"; // Replace with your Notion database ID
 
   const getBlogs = async () => {
-    try {
-      const response = await notion.databases.query({
-        database_id: databaseId,
-      });
-
-      console.log(response);
-      return response;
-      // const blogPosts = response.results.map((page) => {
-      //   return {
-      //     id: page.id,
-      //     title: page.properties.Title.title[0].text.content,
-      //     content: page.properties.Content.rich_text[0].text.content,
-      //     image: page.properties.Image.files[0]?.file.url || null,
-      //   };
-      // });
-
-      // res.status(200).json(blogPosts);
-    } catch (error) {
-      console.error(error);
-      // res.status(500).json({ error: "Failed to fetch data from Notion" });
-    }
+    // try {
+    //   const response = await notion.databases.query({
+    //     database_id: databaseId,
+    //   });
+    //   console.log(response);
+    //   return response;
+    //   // const blogPosts = response.results.map((page) => {
+    //   //   return {
+    //   //     id: page.id,
+    //   //     title: page.properties.Title.title[0].text.content,
+    //   //     content: page.properties.Content.rich_text[0].text.content,
+    //   //     image: page.properties.Image.files[0]?.file.url || null,
+    //   //   };
+    //   // });
+    //   // res.status(200).json(blogPosts);
+    // } catch (error) {
+    //   console.error(error);
+    //   // res.status(500).json({ error: "Failed to fetch data from Notion" });
+    // }
+    // console.log("Notion function called");
+    // const notion = new Client({
+    //   auth: "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",
+    // });
+    // const listUsersResponse = await notion.users.list({});
+    // console.log(listUsersResponse);
   };
 
   getBlogs();
@@ -232,6 +236,8 @@ const BlogAndResources: React.FC = () => {
         .author-name {
           color: #fff;
           font: 600 19px/1 Inter, sans-serif;
+          width: 100%;
+          margin-bottom: 10px;
         }
 
         .read-time {
@@ -253,6 +259,7 @@ const BlogAndResources: React.FC = () => {
         .read-time-text {
           color: #fff;
           font: 400 17px/1 Inter, sans-serif;
+          margin-left: 7px;
         }
       `}</style>
     </>

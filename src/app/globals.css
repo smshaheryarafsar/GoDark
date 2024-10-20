@@ -183,3 +183,56 @@ a {
 .fJzuSe {
   width: 100% !important;
 }
+
+:root {
+  font-family: Helvetica;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#Wrap {
+  position: relative;
+  min-width: 395px;
+  width: 331px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11999px;
+  background-color: #d1d1d1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#Wrap .FollowBox {
+  position: absolute;
+  top: -700px;
+  left: -20px;
+  width: 200px;
+  height: 5000px;
+}
+
+#Wrap .FollowBox:nth-child(1) {
+  z-index: 4;
+}
+
+#Wrap .FollowBox:nth-child(2) {
+  z-index: 3;
+}
+
+#Wrap .FollowBox:nth-child(3) {
+  z-index: 2;
+}
+
+#Wrap .FollowBox:nth-child(4) {
+  z-index: 1;
+  /* border: 2.2px solid blue; */
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import Gradient_bg from "../images/gradient_bg.png";
 
 const CTAButton: React.FC = () => {
   return (
@@ -11,15 +12,46 @@ const CTAButton: React.FC = () => {
             <div className="right"></div>
           </button>
         </div> */}
-        <div className="cta-wrapper">
+        {/* <div className="cta-wrapper">
           <button className="cta-button">
             <div className="cta-background" />
             <span className="cta-text">Discover Our Solutions</span>
           </button>
+        </div> */}
+        <div id="Wrap">
+          <div className="Button-txt">Discover Our Solutions</div>
+          <img
+            className="FollowBox"
+            // src="https://source.unsplash.com/Pd8tLVGx2O4/200x250"
+            src={Gradient_bg.src}
+            alt=""
+            style={{ opacity: 0.9 }}
+          />
         </div>
       </div>
+      {/* 
+      <div id="Wrap">
+        <div className="Button-txt">Discover Our Solutions</div>
+        <img
+          className="FollowBox"
+          src={Gradient_bg.src}
+          alt=""
+          style={{ opacity: 0.8 }}
+        />
+      </div> */}
 
       <style jsx>{`
+        .Button-txt {
+          font-size: 18px;
+          width: 100%;
+          z-index: 4;
+          display: block;
+          color: #6e422b;
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: bolder;
+          font-family: Menlo, sans-serif !important;
+        }
         button {
           position: relative;
           padding: 10px 20px;
