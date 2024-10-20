@@ -1,6 +1,6 @@
 import React from "react";
 import ArticleCard from "./ArticleCard";
-import { Client } from "@notionhq/client";
+// import { Client } from "@notionhq/client";
 
 const BlogAndResources: React.FC = () => {
   // const notion = new Client({
