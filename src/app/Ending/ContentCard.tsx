@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 interface ContentCardProps {
   title: string;
@@ -11,22 +12,92 @@ const ContentCard: React.FC<ContentCardProps> = ({
   content,
   imageSrc,
 }) => {
+  const [singleBlog, setsingleBlog] = useState([
+    {
+      imgURL: "",
+      tag: "",
+      title: "",
+      redirectURL: "",
+      createdTime: "",
+    },
+  ]);
+
+  useEffect(() => {
+    const getBlogs = async () => {
+      let articlesArray = [];
+      try {
+        //Try content
+        const res = await axios.get("https://godark.sadaynaal.com/notion3.php");
+        // const message = res.data
+        console.log("Blog Data ===");
+        console.log(res.data.results);
+        let originalArray = res.data.results;
+
+        const filteredBlogs = originalArray.filter((item: any) => item.cover);
+        console.log("filterBlogs ===");
+        console.log(filteredBlogs);
+
+        let finalArray = [];
+        filteredBlogs.map((item: any, key: number) => {
+          if (key == 0) {
+            console.log("First Article ===");
+            let imgURL = item.cover.external.url;
+            let tag = item.properties.Tags.multi_select[0].name;
+            let title = item.properties.Page.title[0].text.content;
+            let redirectURL = item.url;
+            let createdTime = item.created_time;
+            console.log(imgURL);
+            console.log(tag);
+            console.log(title);
+            console.log(redirectURL);
+            console.log(createdTime);
+            finalArray.push({
+              imgURL: imgURL,
+              tag: tag,
+              title: title,
+              redirectURL: redirectURL,
+              createdTime: createdTime,
+            });
+            setsingleBlog(finalArray);
+          }
+        });
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    getBlogs();
+  }, []);
+
   return (
     <>
-      <img
-        src={imageSrc}
-        alt="Whitepaper or guide illustration"
-        className="content-image"
-      />
-      <div className="content-text">
-        <h2 className="content-title">{title}</h2>
-        <div className="content-description">
-          <p className="description-text">{content}</p>
-          <a href="#" className="read-more">
-            Read More
-          </a>
-        </div>
-      </div>
+      {singleBlog[0].imgURL ? (
+        <>
+          <img
+            src={singleBlog[0].imgURL}
+            alt="Whitepaper or guide illustration"
+            className="content-image"
+          />
+          <div className="content-text">
+            <h2 className="content-title">{singleBlog[0].tag}</h2>
+            <div className="content-description">
+              <a href={singleBlog[0].redirectURL} target="_blank">
+                <p className="description-text">{singleBlog[0].title}</p>
+              </a>
+              <a
+                href={singleBlog[0].redirectURL}
+                className="read-more"
+                target="_blank"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+
       <style jsx>{`
         .content-image {
           aspect-ratio: 1.46;

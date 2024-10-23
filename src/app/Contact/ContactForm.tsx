@@ -44,18 +44,34 @@ const ContactForm: React.FC = () => {
       return false;
     }
 
+    console.log("Contact form submission ===");
+    console.log(params);
+
     try {
       //Try content
-      const res = await axios.post("https://api.example.com/endpoint", params);
-      // const message = res.data
-      console.log(res);
-      console.log(params);
-      setFormAlert(
-        "<div class='SuccessAlert'>Message sent successfully </div>"
+      const res = await axios.post(
+        "https://godark.sadaynaal.com/contactUs.php",
+        params
       );
-      setTimeout(() => {
-        setFormAlert("");
-      }, 7000);
+      // const message = res.data
+      console.log(res.data.response);
+      console.log(params);
+      if (res.data.response == "success") {
+        setFormAlert(
+          "<div class='SuccessAlert'>Message sent successfully </div>"
+        );
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setTimeout(() => {
+          setFormAlert("");
+        }, 7000);
+      } else {
+        setFormAlert(
+          "<div class='ErrorAlert'>Unable to proceed with your request </div>"
+        );
+      }
     } catch (e) {
       console.log(e);
       setFormAlert(
@@ -85,7 +101,7 @@ const ContactForm: React.FC = () => {
                 if (field.name == "message") {
                   setMessage(e.currentTarget.value);
                 }
-                console.log(e.currentTarget.value);
+                // console.log(e.currentTarget.value);
               }}
             />
           ) : (
@@ -101,7 +117,7 @@ const ContactForm: React.FC = () => {
                 } else if (field.name == "phone") {
                   setPhone(e.currentTarget.value);
                 }
-                console.log(e.currentTarget.value);
+                // console.log(e.currentTarget.value);
               }}
               placeholder={field.label}
               aria-label={field.label}

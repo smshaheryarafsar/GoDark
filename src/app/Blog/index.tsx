@@ -1,48 +1,93 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
+import axios from "axios";
 // import { Client } from "@notionhq/client";
 
 const BlogAndResources: React.FC = () => {
   // const notion = new Client({
   //   auth: "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",
   // });
+  const [blogArray, setblogArray] = useState<
+    {
+      imageUrl: any;
+      author: any;
+      title: any;
+      redirectURL: any;
+      readTime: any;
+    }[]
+  >([]);
+  // const databaseId = "122806e58a3e805b8bb0c9ce97b17775"; // Replace with your Notion database ID.
 
-  // const databaseId = "122806e58a3e805b8bb0c9ce97b17775"; // Replace with your Notion database ID
+  useEffect(() => {
+    const getBlogs = async () => {
+      try {
+        //Try content
+        const res = await axios.get("https://godark.sadaynaal.com/notion3.php");
+        // const message = res.data
+        console.log("Blog Data ===");
+        console.log(res.data.results);
+        let originalArray = res.data.results;
+        let articlesArray: React.SetStateAction<
+          {
+            imageUrl: any;
+            author: any;
+            title: any;
+            redirectURL: any;
+            readTime: any;
+          }[]
+        > = [];
 
-  const getBlogs = async () => {
-    // try {
-    //   const response = await notion.databases.query({
-    //     database_id: databaseId,
-    //   });
-    //   console.log(response);
-    //   return response;
-    //   // const blogPosts = response.results.map((page) => {
-    //   //   return {
-    //   //     id: page.id,
-    //   //     title: page.properties.Title.title[0].text.content,
-    //   //     content: page.properties.Content.rich_text[0].text.content,
-    //   //     image: page.properties.Image.files[0]?.file.url || null,
-    //   //   };
-    //   // });
-    //   // res.status(200).json(blogPosts);
-    // } catch (error) {
-    //   console.error(error);
-    //   // res.status(500).json({ error: "Failed to fetch data from Notion" });
-    // }
-    // console.log("Notion function called");
-    // const notion = new Client({
-    //   auth: "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",
-    // });
-    // const listUsersResponse = await notion.users.list({});
-    // console.log(listUsersResponse);
-  };
+        const filteredBlogs = originalArray.filter((item: any) => item.cover);
+        console.log("filterBlogs ===");
+        console.log(filteredBlogs);
 
-  getBlogs();
+        filteredBlogs.map((item: any, key: number) => {
+          if (key > 0) {
+            console.log("Remaining Article ===");
+            let imageUrl = item.cover.external.url;
+            let author = item.properties.Tags.multi_select[0].name;
+            let title = item.properties.Page.title[0].text.content;
+            let redirectURL = item.url;
+            let createdTime = item.created_time;
+            // console.log(imgURL);
+            // console.log(tag);
+            // console.log(title);
+            // console.log(redirectURL);
+            // console.log(createdTime);
+            articlesArray.push({
+              imageUrl: imageUrl,
+              author: author,
+              title: title,
+              redirectURL: redirectURL,
+              readTime: createdTime,
+            });
+          }
+        });
+
+        console.log("articlesArray =====");
+        console.log(articlesArray);
+        const topthreeArticles = articlesArray.slice(0, 3);
+        console.log("topthreeArticles ==> ");
+        console.log(topthreeArticles);
+        setblogArray(topthreeArticles);
+
+        // console.log("imageUrl => " + res.data.results.cover.external.url);
+        // console.log('title => ' + res.data.results)
+        // console.log('author => ' + res.data.results)
+        // console.log('readTime => ' + res.data.results)
+        // console.log('redirectUrl => ' + res.data.results)
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    getBlogs();
+  }, []);
 
   const articlesData = [
     {
       imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/29bdc73bbf8b561ea8ded8e535656bf991b4403909f2ae038348e6ab1e1287a7?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/8887100f357b9a3d92b9ce0ed2d51a3d48c1c1f330e5075ad6b7b0371ed07103?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
       title: "The Future of Digital Transformation in Hospitality",
       author: "Abigail Dawson",
       readTime: "7 min read",
@@ -78,13 +123,14 @@ const BlogAndResources: React.FC = () => {
             </nav>
           </header>
           <div className="insights-grid">
-            {articlesData.map((article, index) => (
+            {blogArray.map((article, index) => (
               <ArticleCard
                 key={index}
                 imageUrl={article.imageUrl}
                 title={article.title}
                 author={article.author}
                 readTime={article.readTime}
+                redirectURL={article.redirectURL}
               />
             ))}
           </div>

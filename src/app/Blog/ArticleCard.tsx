@@ -5,6 +5,7 @@ interface ArticleCardProps {
   title: string;
   author: string;
   readTime: string;
+  redirectURL: string;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -12,6 +13,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   title,
   author,
   readTime,
+  redirectURL,
 }) => {
   return (
     <>
@@ -134,7 +136,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 
         .article-image {
           aspect-ratio: 1.9;
-          object-fit: contain;
+          object-fit: cover;
           object-position: center;
           width: 100%;
           border-radius: 14px;
