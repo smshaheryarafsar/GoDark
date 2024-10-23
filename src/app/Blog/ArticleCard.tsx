@@ -18,10 +18,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   return (
     <>
       <article className="article-card">
-        <div className="image-wrapper">
-          <img src={imageUrl} alt={title} className="article-image" />
-        </div>
-        <h2 className="article-title">{title}</h2>
+        <a href={redirectURL} target="_blank">
+          <div className="image-wrapper">
+            <img src={imageUrl} alt={title} className="article-image" />
+          </div>
+          <h2 className="article-title">{title}</h2>
+        </a>
         <div className="article-meta">
           <div className="author-name">{author}</div>
           <div className="read-time">

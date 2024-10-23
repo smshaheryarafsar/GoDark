@@ -7,11 +7,7 @@ interface ContentCardProps {
   imageSrc: string;
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({
-  title,
-  content,
-  imageSrc,
-}) => {
+const ContentCard: React.FC<ContentCardProps> = () => {
   const [singleBlog, setsingleBlog] = useState([
     {
       imgURL: "",

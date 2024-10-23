@@ -45,7 +45,7 @@ const BlogAndResources: React.FC = () => {
           if (key > 0) {
             console.log("Remaining Article ===");
             let imageUrl = item.cover.external.url;
-            let author = item.properties.Tags.multi_select[0].name;
+            let author = item.properties.Owner.people[0].name;
             let title = item.properties.Page.title[0].text.content;
             let redirectURL = item.url;
             let createdTime = item.created_time;
