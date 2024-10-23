@@ -1,4 +1,5 @@
 import React from "react";
+import NeuralImg from "../images/Neural-icon.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="footer-icon-container">
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/476a2eec2a356a82e576ee0af6d551c592bba4a180dbb3edbe184d9707056234?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
+                src={NeuralImg.src}
                 className="footer-icon"
                 alt="Neural Technology Insights icon"
               />

@@ -1,6 +1,7 @@
 import React from "react";
 import ExpertiseCard from "./ExpertiseCard";
 import { expertiseData } from "./expertiseData";
+import expertiseBG from "../images/expertise-bg.png";
 
 const StrategicExpertise: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const StrategicExpertise: React.FC = () => {
         <div className="expertise-image-wrapper">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7086fe5f061a93ee5a6a8f73a25f26e05f7983b121de2833eb8817a9b652a6bb?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
+            src={expertiseBG.src}
             alt="Strategic expertise illustration"
             className="expertise-image"
           />

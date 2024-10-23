@@ -6,6 +6,7 @@ interface ArticleCardProps {
   author: string;
   readTime: string;
   redirectURL: string;
+  readTimeIcon: string;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({
@@ -14,6 +15,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   author,
   readTime,
   redirectURL,
+  readTimeIcon,
 }) => {
   return (
     <>
@@ -28,11 +30,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           <div className="author-name">{author}</div>
           <div className="read-time">
             <div className="read-time-icon">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/01c9fc070ee2cdec78b2dff7440c7c73100a55723a586d8e00588a266c28b3d0?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63"
-                alt=""
-                className="read-time-icon"
-              />
+              <img src={readTimeIcon} alt="" className="read-time-icon" />
             </div>
             <div className="read-time-text">{readTime}</div>
           </div>

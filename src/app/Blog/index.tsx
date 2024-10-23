@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import axios from "axios";
-// import { Client } from "@notionhq/client";
+import readTimeIcon from "../images/read-time-icon.svg";
 
 const BlogAndResources: React.FC = () => {
-  // const notion = new Client({
-  //   auth: "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",
-  // });
-  const [blogArray, setblogArray] = useState<
-    {
-      imageUrl: any;
-      author: any;
-      title: any;
-      redirectURL: any;
-      readTime: any;
-    }[]
-  >([]);
+  const [blogArray, setblogArray] = useState<any[]>([]);
   // const databaseId = "122806e58a3e805b8bb0c9ce97b17775"; // Replace with your Notion database ID.
 
   useEffect(() => {
@@ -27,15 +16,7 @@ const BlogAndResources: React.FC = () => {
         console.log("Blog Data ===");
         console.log(res.data.results);
         const originalArray = res.data.results;
-        const articlesArray: React.SetStateAction<
-          {
-            imageUrl: any;
-            author: any;
-            title: any;
-            redirectURL: any;
-            readTime: any;
-          }[]
-        > = [];
+        const articlesArray: any[] = [];
 
         const filteredBlogs = originalArray.filter((item: any) => item.cover);
         console.log("filterBlogs ===");
@@ -106,6 +87,7 @@ const BlogAndResources: React.FC = () => {
                 author={article.author}
                 readTime={article.readTime}
                 redirectURL={article.redirectURL}
+                readTimeIcon={readTimeIcon.src}
               />
             ))}
           </div>

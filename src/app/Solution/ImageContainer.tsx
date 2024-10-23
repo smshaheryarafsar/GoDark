@@ -1,12 +1,14 @@
 import React from "react";
-import profilePic from "../images/image-58.jpg";
+import sliderImg from "../images/image-58.jpg";
+import sliderImg02 from "../images/image-59.jpg";
+import sliderImg03 from "../images/image-60.jpg";
 import ImageSlider from "simple-image-carousel";
 
 const ImageContainer: React.FC = () => {
   const images = [
-    { url: profilePic.src },
-    // { url: profilePic.src },
-    // { url: profilePic.src },
+    { url: sliderImg.src },
+    { url: sliderImg02.src },
+    { url: sliderImg03.src },
   ];
 
   return (

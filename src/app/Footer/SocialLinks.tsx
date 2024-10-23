@@ -1,4 +1,7 @@
 import React from "react";
+import github from "../images/github-icon.svg";
+import twitter from "../images/twitter-icon.svg";
+import linkedin from "../images/linkedin-icon.svg";
 
 interface SocialLink {
   name: string;
@@ -9,17 +12,17 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     name: "Twitter",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a772419c36abe54e112da22255d334e21580b035e21f55468d4e3e0c8e7e4ff7?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
+    icon: twitter.src,
     href: "#",
   },
   {
     name: "LinkedIn",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d00e000e587b839ce44d8e2c944c00e02974f18508a54175b0efc764958c325a?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
+    icon: linkedin.src,
     href: "#",
   },
   {
     name: "GitHub",
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/1a2616f2737596c552ca4a47182bd280bac11056ccce5ae9367efb5ba41a2a44?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
+    icon: github.src,
     href: "#",
   },
 ];
