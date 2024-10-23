@@ -26,8 +26,8 @@ const BlogAndResources: React.FC = () => {
         // const message = res.data
         console.log("Blog Data ===");
         console.log(res.data.results);
-        let originalArray = res.data.results;
-        let articlesArray: React.SetStateAction<
+        const originalArray = res.data.results;
+        const articlesArray: React.SetStateAction<
           {
             imageUrl: any;
             author: any;
@@ -44,11 +44,11 @@ const BlogAndResources: React.FC = () => {
         filteredBlogs.map((item: any, key: number) => {
           if (key > 0) {
             console.log("Remaining Article ===");
-            let imageUrl = item.cover.external.url;
-            let author = item.properties.Owner.people[0].name;
-            let title = item.properties.Page.title[0].text.content;
-            let redirectURL = item.url;
-            let createdTime = item.created_time;
+            const imageUrl = item.cover.external.url;
+            const author = item.properties.Owner.people[0].name;
+            const title = item.properties.Page.title[0].text.content;
+            const redirectURL = item.url;
+            const createdTime = item.created_time;
             // console.log(imgURL);
             // console.log(tag);
             // console.log(title);
@@ -83,31 +83,6 @@ const BlogAndResources: React.FC = () => {
 
     getBlogs();
   }, []);
-
-  const articlesData = [
-    {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/8887100f357b9a3d92b9ce0ed2d51a3d48c1c1f330e5075ad6b7b0371ed07103?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
-      title: "The Future of Digital Transformation in Hospitality",
-      author: "Abigail Dawson",
-      readTime: "7 min read",
-    },
-    {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/8887100f357b9a3d92b9ce0ed2d51a3d48c1c1f330e5075ad6b7b0371ed07103?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
-      title: "Leveraging Data Analytics for Enhanced Customer Experiences",
-      author: "Andrey Platov",
-      readTime: "12 min read",
-    },
-    {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/1ca070c0203285c340b6a354cf9ab1bedfc66f9bc0893c25a8f2e495d2eb4f80?placeholderIfAbsent=true&apiKey=2daa08173b524f8da8f7281d62378a63",
-      title:
-        "Sustainability in the F&B Industry: Best Practices for the GCC Market",
-      author: "Abigail Dawson",
-      readTime: "5 min read",
-    },
-  ];
 
   return (
     <>

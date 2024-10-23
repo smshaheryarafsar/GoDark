@@ -20,14 +20,13 @@ const ContentCard: React.FC<ContentCardProps> = () => {
 
   useEffect(() => {
     const getBlogs = async () => {
-      let articlesArray = [];
       try {
         //Try content
         const res = await axios.get("https://godark.sadaynaal.com/notion3.php");
         // const message = res.data
         console.log("Blog Data ===");
         console.log(res.data.results);
-        let originalArray = res.data.results;
+        const originalArray = res.data.results;
 
         const filteredBlogs = originalArray.filter((item: any) => item.cover);
         console.log("filterBlogs ===");
@@ -37,11 +36,11 @@ const ContentCard: React.FC<ContentCardProps> = () => {
         filteredBlogs.map((item: any, key: number) => {
           if (key == 0) {
             console.log("First Article ===");
-            let imgURL = item.cover.external.url;
-            let tag = item.properties.Tags.multi_select[0].name;
-            let title = item.properties.Page.title[0].text.content;
-            let redirectURL = item.url;
-            let createdTime = item.created_time;
+            const imgURL = item.cover.external.url;
+            const tag = item.properties.Tags.multi_select[0].name;
+            const title = item.properties.Page.title[0].text.content;
+            const redirectURL = item.url;
+            const createdTime = item.created_time;
             console.log(imgURL);
             console.log(tag);
             console.log(title);
