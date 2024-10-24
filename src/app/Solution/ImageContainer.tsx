@@ -1,7 +1,7 @@
 import React from "react";
-import sliderImg from "../images/image-58.jpg";
-import sliderImg02 from "../images/image-59.jpg";
-import sliderImg03 from "../images/image-60.jpg";
+import sliderImg from "../images/1GD.png";
+import sliderImg02 from "../images/2GD.png";
+import sliderImg03 from "../images/3GD.png";
 import ImageSlider from "simple-image-carousel";
 
 const ImageContainer: React.FC = () => {
