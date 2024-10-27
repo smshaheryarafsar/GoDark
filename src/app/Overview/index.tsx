@@ -21,7 +21,7 @@ const CompanyOverview: React.FC = () => {
         {`
           .overview-contaimer {
             background-color: #000;
-            padding: 60px 100px 60px 0px !important;
+            padding: 60px 100px 60px 0px;
           }
           .content-wrapper {
             display: flex;

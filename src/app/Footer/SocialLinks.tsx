@@ -18,7 +18,7 @@ const socialLinks: SocialLink[] = [
   {
     name: "LinkedIn",
     icon: linkedin.src,
-    href: "#",
+    href: "https://www.linkedin.com/company/godark/mycompany",
   },
   {
     name: "GitHub",
@@ -37,6 +37,7 @@ const SocialLinks: React.FC = () => {
               href={link.href}
               className={`social-link social-link-${link.name.toLowerCase()}`}
               aria-label={link.name}
+              target="_blank"
             >
               <img src={link.icon} alt="" className="social-icon" />
             </a>
