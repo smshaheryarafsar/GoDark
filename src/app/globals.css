@@ -321,14 +321,15 @@ a {
     padding: 0px 25px !important;
   }
 
-  .image-container > div > div > .gCnGG,
-  .image-container > div > div > .bpjWkS {
-    height: 20px !important;
-  }
-
   .image-container > div,
   .image-container > div > div > div {
-    height: 120% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    min-height: 20px !important;
+  }
+
+  div.sc-dntaoT {
+    height: 20px !important;
   }
 
   .Button-txt {
