@@ -51,9 +51,6 @@ const Footer: React.FC<FooterProps> = ({ copyrightYear, companyName }) => {
           .footer-container {
             padding: 0 20px;
           }
-          .footer-content {
-            max-width: 100%;
-          }
         }
       `}</style>
     </footer>

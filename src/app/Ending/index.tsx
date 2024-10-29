@@ -39,6 +39,7 @@ const WhitepapersAndGuides: React.FC<WhitepapersAndGuidesProps> = ({
             max-width: 100%;
             padding: 40px 3px 0 0;
             padding: 0 20px;
+            margin-bottom: 40px !important;
           }
           .content-wrapper {
             max-width: 100%;

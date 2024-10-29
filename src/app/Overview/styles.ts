@@ -63,11 +63,17 @@ export const styles = css`
 
     .title {
       max-width: 100%;
-      font-size: 40px;
+      font-size: 30px !important;
     }
 
     .description {
       max-width: 100%;
+      font: 18px / 36px Sora, sans-serif !important;
+    }
+
+    .right-column {
+      padding: 0px !important;
+      margin-left: 0px !important;
     }
   }
 `;

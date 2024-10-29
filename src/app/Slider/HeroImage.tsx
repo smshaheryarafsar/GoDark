@@ -27,6 +27,11 @@ const HeroImage: React.FC = () => {
           .image-column {
             width: 100%;
           }
+
+          .image-column {
+            margin-left: 0px !important;
+            top: 20px !important;
+          }
         }
 
         .hero-image {

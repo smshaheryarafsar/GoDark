@@ -72,8 +72,11 @@ const WhyChooseUsSection: React.FC = () => {
             max-width: 100%;
           }
           .section-title {
-            max-width: 100%;
-            font-size: 40px;
+            max-width: 100% !important;
+            font-size: 34px !important;
+            z-index: 999 !important;
+            position: relative !important;
+            margin-bottom: 20px !important;
           }
         }
       `}</style>

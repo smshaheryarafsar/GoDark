@@ -41,6 +41,7 @@ export const styles = css`
   @media (max-width: 991px) {
     .left-column {
       width: 100%;
+      padding: 0px 25px !important;
     }
   }
 

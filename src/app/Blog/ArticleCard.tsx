@@ -97,7 +97,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           width: 100%;
           align-items: start;
           gap: 40px 94px;
-          justify-content: space-between;
+          justify-content: start;
           flex-wrap: wrap;
         }
 

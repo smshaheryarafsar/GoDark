@@ -44,6 +44,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gCnGG {
+  height: 20px !important;
+}
+
 body {
   background: #111111 !important;
 }
@@ -118,7 +122,91 @@ a {
   position: absolute;
 }
 
+@media screen and (min-width: 968px) {
+  .topnav #myLinks {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 967px) {
+  .copyright.jsx-a674865a2c66177d {
+    margin: auto 0 !important;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .contact-container {
+    width: 100% !important;
+  }
+
+  .article-card {
+    margin-bottom: 30px !important;
+  }
+
+  .nav-list {
+    display: none !important;
+  }
+
+  .topnav {
+    overflow: visible !important;
+    background-color: #f34d02 !important;
+    position: relative !important;
+    z-index: 999 !important;
+    top: 30% !important;
+    position: absolute !important;
+    float: right !important;
+    right: 15px !important;
+  }
+
+  .our-solutions-section {
+    padding: 50px 0px !important;
+  }
+
+  .img-inner-container > img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .container2 {
+    max-width: 100%;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .right-column {
+    padding: 0px !important;
+    margin-left: 0px !important;
+  }
+
+  .section-description {
+    font: 300 16px / 24px Sora, sans-serif !important;
+  }
+
+  .section-title {
+    font: 500 22px / 18px "Clash Display Variable", -apple-system, Roboto,
+      Helvetica, sans-serif !important;
+  }
+
+  .description {
+    font: 16px / 30px Sora, sans-serif !important;
+    margin-top: 20px;
+  }
+
+  .text-column {
+    padding-left: 25px !important;
+  }
+
+  .feature-description,
+  .expertise-description,
+  .description {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+
+  .social-links {
+    padding-left: 60px !important;
+  }
+
   .nav-item {
     margin-bottom: 5px !important;
   }
@@ -128,7 +216,7 @@ a {
   }
 
   #Wrap {
-    min-width: 100% !important;
+    min-width: max-content !important;
   }
 
   .hero-section {
@@ -154,7 +242,7 @@ a {
   }
 
   .expertise-cards {
-    margin-top: 35% !important;
+    margin-top: 50% !important;
     position: absolute !important;
     width: 80% !important;
     padding: 25px !important;
@@ -167,6 +255,7 @@ a {
     width: 100% !important;
     margin-left: 5%;
     margin-top: -20% !important;
+    margin-top: 15% !important;
   }
 
   .insights-container {
@@ -183,11 +272,20 @@ a {
 
   .sustainability-section {
     padding: 25px !important;
-    margin-top: 40% !important;
+    margin-top: -20% !important;
   }
 
   .expertise-image {
-    width: 100% !important;
+    max-width: -webkit-fill-available !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 1 !important;
+    position: absolute !important;
+    margin-left: -10px !important;
+  }
+
+  .expertise-image-wrapper {
+    height: 80vh !important;
   }
 
   .content-wrapper {
@@ -215,11 +313,43 @@ a {
 
   .about-us {
     z-index: 2 !important;
-    position: absolute !important;
+    position: relative !important;
   }
 
   .left-column {
     padding-top: 140px !important;
+    padding: 0px 25px !important;
+  }
+
+  .image-container > div > div > .gCnGG,
+  .image-container > div > div > .bpjWkS {
+    height: 20px !important;
+  }
+
+  .image-container > div,
+  .image-container > div > div > div {
+    height: 120% !important;
+  }
+
+  .Button-txt {
+    font-size: 16px !important;
+  }
+
+  .sub-title {
+    font: 400 18px / 28px Sora, sans-serif !important;
+  }
+
+  .main-title.jsx-ec3f1d53bff66912 {
+    font-size: 32px !important;
+    line-height: 43px !important;
+  }
+
+  .content-wrapper {
+    display: block !important;
+  }
+
+  #solutions {
+    padding: 60px 30px 0px 30px !important;
   }
 }
 
@@ -278,4 +408,46 @@ a {
 #Wrap .FollowBox:nth-child(4) {
   z-index: 1;
   /* border: 2.2px solid blue; */
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  margin-top: 60px;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #ff5100;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: white;
 }

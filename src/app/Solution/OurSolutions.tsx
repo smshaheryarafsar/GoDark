@@ -87,7 +87,7 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
         @media (max-width: 991px) {
           .container2 {
             max-width: 100%;
-            pading-top: 40px;
+            padding: 38px 20px !important;
           }
         }
 
@@ -116,6 +116,7 @@ const OurSolutions: React.FC<OurSolutionsProps> = ({ title, description }) => {
         @media (max-width: 991px) {
           .left-column {
             width: 100%;
+            margin-bottom: 5%;
           }
         }
 

@@ -33,7 +33,7 @@ export default css`
 
   .description {
     margin-top: 50px;
-    font: 30px/44px Sora, sans-serif !important;
+    font: 30px/44px Sora, sans-serif;
     padding-right: 100px;
   }
 

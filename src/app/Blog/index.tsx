@@ -11,7 +11,9 @@ const BlogAndResources: React.FC = () => {
     const getBlogs = async () => {
       try {
         //Try content
-        const res = await axios.get("https://godark.sadaynaal.com/notion3.php");
+        const res = await axios.get(
+          "https://godark.sadaynaal.com/goDarkBlogs.php"
+        );
         // const message = res.data
         console.log("Blog Data ===");
         console.log(res.data.results);
@@ -25,16 +27,16 @@ const BlogAndResources: React.FC = () => {
         filteredBlogs.map((item: any, key: number) => {
           if (key > 0) {
             console.log("Remaining Article ===");
-            const imageUrl = item.cover.external.url;
+            const imageUrl = item.cover.file.url;
             const author = item.properties.Owner.people[0].name;
             const title = item.properties.Page.title[0].text.content;
-            const redirectURL = item.url;
-            const createdTime = item.created_time;
-            // console.log(imgURL);
-            // console.log(tag);
-            // console.log(title);
-            // console.log(redirectURL);
-            // console.log(createdTime);
+            const redirectURL = item.public_url;
+            const createdTime = key + 2 + " min read";
+            console.log(imageUrl);
+            console.log(author);
+            console.log(title);
+            console.log(redirectURL);
+            console.log(createdTime);
             articlesArray.push({
               imageUrl: imageUrl,
               author: author,
@@ -72,11 +74,11 @@ const BlogAndResources: React.FC = () => {
         <section className="insights-container">
           <header className="insights-header">
             <h1>Insights and Trends</h1>
-            <nav>
+            {/* <nav>
               <a href="#" aria-label="See all insights and trends">
                 See All
               </a>
-            </nav>
+            </nav> */}
           </header>
           <div className="insights-grid">
             {blogArray.map((article, index) => (
@@ -154,7 +156,7 @@ const BlogAndResources: React.FC = () => {
           width: 100%;
           align-items: start;
           gap: 40px 94px;
-          justify-content: space-between;
+          justify-content: start;
           flex-wrap: wrap;
         }
 

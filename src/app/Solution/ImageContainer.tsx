@@ -331,8 +331,8 @@ const ImageContainer: React.FC = () => {
 
         @media (max-width: 991px) {
           .image-container {
-            max-width: 100%;
-            margin-top: 40px;
+            max-width: 80% !important;
+            margin: 40px auto 0 auto !important;
           }
         }
 

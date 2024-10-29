@@ -329,6 +329,12 @@ const Footer: React.FC = () => {
           .footer {
             margin-top: 40px;
           }
+
+          .footer {
+            width: 100% !important;
+            margin-top: 40px !important;
+            justify-content: center !important;
+          }
         }
 
         .footer-content {

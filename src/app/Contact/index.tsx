@@ -83,11 +83,12 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ backgroundImageSrc }) => {
         @media (max-width: 991px) {
           .content-wrapper {
             max-width: 100%;
-            padding: 0 20px;
+            padding: 0 0px;
           }
           .title {
-            max-width: 100%;
-            font-size: 40px;
+            max-width: 100% !important;
+            font-size: 40px !important;
+            text-align: center !important;
           }
           .contact-container {
             padding: 0 20px;

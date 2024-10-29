@@ -86,11 +86,12 @@ const CompanyOverview: React.FC = () => {
 
             .title {
               max-width: 100%;
-              font-size: 40px;
+              font-size: 30px;
             }
 
             .description {
               max-width: 100%;
+              font: 16px / 30px Sora, sans-serif !important;
             }
           }
         `}

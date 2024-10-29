@@ -22,7 +22,9 @@ const ContentCard: React.FC<ContentCardProps> = () => {
     const getBlogs = async () => {
       try {
         //Try content
-        const res = await axios.get("https://godark.sadaynaal.com/notion3.php");
+        const res = await axios.get(
+          "https://godark.sadaynaal.com/goDarkBlogs.php"
+        );
         // const message = res.data
         console.log("Blog Data ===");
         console.log(res.data.results);
@@ -36,19 +38,19 @@ const ContentCard: React.FC<ContentCardProps> = () => {
         filteredBlogs.map((item: any, key: number) => {
           if (key == 0) {
             console.log("First Article ===");
-            const imgURL = item.cover.external.url;
-            const tag = item.properties.Tags.multi_select[0].name;
+            const imageUrl = item.cover.file.url;
+            const author = item.properties.Owner.people[0].name;
             const title = item.properties.Page.title[0].text.content;
-            const redirectURL = item.url;
-            const createdTime = item.created_time;
-            console.log(imgURL);
-            console.log(tag);
+            const redirectURL = item.public_url;
+            const createdTime = key + 2 + " min read";
+            console.log(imageUrl);
+            console.log(author);
             console.log(title);
             console.log(redirectURL);
             console.log(createdTime);
             finalArray.push({
-              imgURL: imgURL,
-              tag: tag,
+              imgURL: imageUrl,
+              tag: author,
               title: title,
               redirectURL: redirectURL,
               createdTime: createdTime,

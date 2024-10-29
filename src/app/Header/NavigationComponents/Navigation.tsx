@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavLink from "./NavLink";
 import ContactButton from "./ContactButton";
 import Logo from "../../images/godark-logo.png";
@@ -8,6 +8,18 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ navItems }) => {
+  const [showtoggle, setshowtoggle] = useState(false);
+
+  const openMenu = async () => {
+    console.log("open navigation");
+
+    if (showtoggle) {
+      setshowtoggle(false);
+    } else if (!showtoggle) {
+      setshowtoggle(true);
+    }
+  };
+
   return (
     <nav className="main-nav">
       {/* <div className="logo-container">
@@ -19,6 +31,28 @@ const Navigation: React.FC<NavigationProps> = ({ navItems }) => {
         <img src={Logo.src} className="logo-img" />
       </div>
       <div className="gradient-background" />
+      <div className="topnav">
+        {/* <!-- Navigation links (hidden by default) --> */}
+        <div
+          id="myLinks"
+          style={{
+            display: showtoggle ? "block" : "none",
+          }}
+        >
+          {navItems.map((item, index) => (
+            <a href={item.href} onClick={openMenu}>
+              {item.text}
+            </a>
+          ))}
+          <a href="#contact" onClick={openMenu}>
+            Contact
+          </a>
+        </div>
+        {/* <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links --> */}
+        <a href="javascript:void(0);" className="icon" onClick={openMenu}>
+          <i className="fa fa-bars"></i>
+        </a>
+      </div>
       <ul className="nav-list">
         {navItems.map((item, index) => (
           <NavLink key={index} text={item.text} href={item.href} />
