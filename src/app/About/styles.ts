@@ -119,6 +119,7 @@ export default css`
     .mission-vision-column {
       width: 100%;
       margin-left: 0;
+      right: auto !important;
     }
 
     .title {
@@ -127,6 +128,7 @@ export default css`
 
     .mission-vision-column {
       margin-top: 40px;
+      position: initial !important;
     }
 
     .line.long {

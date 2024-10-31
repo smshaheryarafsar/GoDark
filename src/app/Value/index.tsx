@@ -264,8 +264,28 @@ export default function Values() {
         @media (max-width: 991px) {
           .div-4 {
             max-width: 100%;
-            padding-left: 20px;
+            padding-left: 20px !important;
           }
+          .item > .heading-3 {
+            font-size: 24px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .item > .container {
+            font-size: 16px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .div-9 {
+            height: 130px !important;
+          }
+        }
+
+        .div-3 {
+          padding: 20px !important;
+          margin-left: -10px !important;
+          width: 110% !important;
+          max-width: 105% !important;
         }
         .div-5 {
           display: flex;
@@ -297,10 +317,21 @@ export default function Values() {
         }
         @media (max-width: 991px) {
           .div-7 {
-            max-width: 100%;
-            margin-top: 40px;
+            max-width: 115%;
+            margin-top: 0px !important;
             padding: 20px;
             min-height: 100%;
+            margin-left: -30px !important;
+          }
+          .div-5 {
+            gap: 0px 87px !important;
+          }
+          .div-888 {
+            max-width: 100% !important;
+            width: 100% !important;
+          }
+          .div-6 {
+            height: 80px !important;
           }
         }
         .div-8 {
@@ -308,7 +339,7 @@ export default function Values() {
           display: flex;
           align-items: flex-start;
           gap: 20px;
-          width: 100%;
+          width: 100% !important;
           flex-wrap: wrap;
           justify-content: space-between;
         }
@@ -317,7 +348,8 @@ export default function Values() {
             max-width: 100%;
           }
           .div-888 {
-            max-width: 80% !important;
+            max-width: 100% !important;
+            width: 100% !important;
           }
         }
         .div-9 {

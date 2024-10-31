@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BrandName from "./BrandName";
 import Description from "./Description";
 import CTAButton from "./CTAButton";
 import sliderbgImage from "../images/slider-bg-01.png";
 
 const HeroSection: React.FC = () => {
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log("windowDimensions ==>");
+  console.log(windowDimensions);
+
   return (
     <>
       <section className="hero-section">
@@ -17,10 +36,17 @@ const HeroSection: React.FC = () => {
         <svg width="0" height="0">
           <defs>
             <clipPath id="svgPath">
-              <path
-                d="M1167.75 584.56C1167.75 906.962 906.393 1168.32 583.992 1168.32C261.59 1168.32 0.231689 906.962 0.231689 584.56C0.231689 262.158 261.59 0.800049 583.992 0.800049C906.393 0.800049 1167.75 262.158 1167.75 584.56ZM188.903 584.56C188.903 802.762 365.79 979.649 583.992 979.649C802.193 979.649 979.08 802.762 979.08 584.56C979.08 366.359 802.193 189.471 583.992 189.471C365.79 189.471 188.903 366.359 188.903 584.56Z"
-                fill="#D9D9D9"
-              />
+              {windowDimensions.width <= 991 ? (
+                <path
+                  d="M648 324C648 502.94 502.94 648 324 648C145.06 648 0 502.94 0 324C0 145.06 145.06 0 324 0C502.94 0 648 145.06 648 324ZM104.717 324C104.717 445.107 202.893 543.283 324 543.283C445.107 543.283 543.283 445.107 543.283 324C543.283 202.893 445.107 104.717 324 104.717C202.893 104.717 104.717 202.893 104.717 324Z"
+                  fill="#D9D9D9"
+                />
+              ) : (
+                <path
+                  d="M1167.75 584.56C1167.75 906.962 906.393 1168.32 583.992 1168.32C261.59 1168.32 0.231689 906.962 0.231689 584.56C0.231689 262.158 261.59 0.800049 583.992 0.800049C906.393 0.800049 1167.75 262.158 1167.75 584.56ZM188.903 584.56C188.903 802.762 365.79 979.649 583.992 979.649C802.193 979.649 979.08 802.762 979.08 584.56C979.08 366.359 802.193 189.471 583.992 189.471C365.79 189.471 188.903 366.359 188.903 584.56Z"
+                  fill="#D9D9D9"
+                />
+              )}
             </clipPath>
           </defs>
         </svg>
@@ -72,7 +98,10 @@ const HeroSection: React.FC = () => {
         .mask > img {
           width: 100%;
           animation: zoom-ins 4s !important;
-          height: 100vh;
+          height: 115vh;
+          z-index: 10;
+          position: fixed;
+          width: -webkit-fill-available;
         }
 
         @keyframes zoom-ins {
@@ -109,6 +138,10 @@ const HeroSection: React.FC = () => {
             flex-direction: column;
             align-items: stretch;
             gap: 0;
+          }
+          .mask > img {
+            width: 100vh !important;
+            height: min-content !important;
           }
         }
 

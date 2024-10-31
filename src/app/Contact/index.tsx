@@ -92,6 +92,8 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ backgroundImageSrc }) => {
           }
           .contact-container {
             padding: 0 20px;
+            width: 90% !important;
+            margin: 20px auto;
           }
           .description {
             max-width: 100%;

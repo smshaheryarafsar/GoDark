@@ -12,7 +12,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <header>
+    <header style={{ paddingTop: "30px" }}>
       <Navigation navItems={navItems} />
     </header>
   );

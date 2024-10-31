@@ -106,14 +106,24 @@ const BlogAndResources: React.FC = () => {
           margin-top: -67px;
         }
         .blog-title {
-          color: #fff;
-          font: 700 81px/1 Clash Display Variable, -apple-system, Roboto,
+          background: linear-gradient(
+            135deg,
+            #fff 30%,
+            #ecaa8b 80%,
+            #fdf7fe 100%
+          );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          font: 1000 80px / 1 "Clash Display Variable", -apple-system, Roboto,
             Helvetica, sans-serif;
         }
         @media (max-width: 991px) {
           .blog-title {
             max-width: 100%;
             font-size: 40px;
+          }
+          .main-container {
+            padding: 60px 31px !important;
           }
         }
 
@@ -144,9 +154,17 @@ const BlogAndResources: React.FC = () => {
             sans-serif;
         }
 
+        .insights-header > h1 {
+          font-weight: 400 !important;
+        }
+
         @media (max-width: 991px) {
           .insights-header {
             max-width: 100%;
+          }
+          .insights-header > h1 {
+            font-weight: 400 !important;
+            font-size: 20px !important;
           }
         }
 
@@ -220,6 +238,8 @@ const BlogAndResources: React.FC = () => {
         @media (max-width: 991px) {
           .article-title {
             max-width: 100%;
+            font-size: x-large !important;
+            line-height: normal !important;
           }
         }
 

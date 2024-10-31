@@ -83,6 +83,7 @@ const StrategicExpertise: React.FC = () => {
           }
           .expertise-image {
             max-width: 100%;
+            right: 10% !important;
           }
         }
       `}</style>

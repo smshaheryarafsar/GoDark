@@ -147,9 +147,16 @@ const ContentCard: React.FC<ContentCardProps> = () => {
           .content-image,
           .content-text,
           .content-title,
-          .content-description,
           .description-text {
             max-width: 100%;
+          }
+          .description-text {
+            max-width: 100%;
+            font-size: x-large !important;
+            line-height: normal !important;
+          }
+          .content-title {
+            font: 600 19px / 1 Inter, sans-serif !important;
           }
           .read-more {
             max-width: 100%;

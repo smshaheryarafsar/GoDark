@@ -63,6 +63,7 @@ const ExpertiseCard: React.FC<ExpertiseCardProps> = ({
             .expertise-item,
             .expertise-description {
               max-width: 100%;
+              right: 10% !important;
             }
           }
         `}</style>
